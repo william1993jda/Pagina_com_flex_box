@@ -1,0 +1,340 @@
+//Variaveis do SASS.
+$cor-verde: #c3c63b;
+$cor-escuro: #191c03;
+$cor-branca: #ffffff;
+$tamanho-titles: 2rem;
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+    font-family: 'open sans', sans-serif;
+}
+
+nav, ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+/*HEADER*/
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: $cor-branca;
+}
+
+header img {
+    width: 200px;
+}
+
+header nav {
+    display: flex;
+}
+
+header li a {
+    color: $cor-escuro;
+}
+
+header li {
+    margin: 0 15px;
+}
+
+header li:first-child {
+    margin-left: 0;
+}
+
+header li:last-child {
+    margin-right: 0;
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+    }
+
+    header img {
+        margin-bottom: 15px;
+    }
+}
+
+/*Hero*/
+.hero {
+    background-image: url("../img/hero.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    color: $cor-branca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+}
+
+.hero h3 {
+    font-size: $tamanho-titles;
+    margin-bottom: 15px;
+}
+
+.hero .btn {
+    background-color: $cor-branca;
+    border-radius: 4px;
+    color: $cor-escuro;
+    padding: 20px 50px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+   .hero h1 {
+       font-size: 2.5rem;
+   }
+    .hero h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/*Conheça o hotel*/
+
+.conheca-o-hotel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 50px;
+}
+
+.conheca-o-hotel h3 {
+    font-size: $tamanho-titles;
+    margin-bottom: 35px;
+    color: $cor-escuro;
+    text-align: center;
+}
+
+.conheca-o-hotel p {
+    max-width: 800px;
+    margin-bottom: 35px;
+    color: $cor-escuro;
+    text-align: center;
+}
+
+.conheca-o-hotel hr {
+    width: 200px;
+    height: 2px;
+    background-color: $cor-escuro;
+    margin-bottom: 70px;
+    border: none;
+}
+
+.conheca-o-hotel .grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.conheca-o-hotel .grid li {
+    height: 350px;
+    padding: 20px;
+    border-radius: 4px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+}
+
+.conheca-o-hotel .grid li.small {
+    flex-basis: 40%;
+}
+
+.conheca-o-hotel .grid li.large {
+    flex-basis: 60%;
+}
+
+@media (max-width: 700px) {
+    .conheca-o-hotel .grid li.small,
+    .conheca-o-hotel .grid li.large{
+        flex-basis: 100%;
+    }
+}
+
+/*Caracteristicas*/
+
+.caracteristicas {
+    background-color: $cor-escuro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 50px;
+}
+
+.caracteristicas h3 {
+    font-size: $tamanho-titles;
+    margin-bottom: 35px;
+    color: $cor-branca;
+    text-align: center;
+}
+
+.caracteristicas p {
+    max-width: 800px;
+    margin-bottom: 35px;
+    color: $cor-branca;
+    text-align: center;
+}
+
+.caracteristicas hr {
+    width: 200px;
+    height: 2px;
+    background-color: $cor-branca;
+    margin-bottom: 70px;
+    border: none;
+}
+
+.caracteristicas .grid {
+    width: 100%;
+    display: flex;
+}
+
+.caracteristicas .grid li {
+    padding: 0 30px;
+    text-align: center;
+}
+
+.caracteristicas .grid li i {
+    color: $cor-verde;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.caracteristicas .grid li h4 {
+    font-size: 1.5rem;
+    color: $cor-verde;
+    margin-bottom: 30px;
+}
+
+.caracteristicas .grid li p {
+    color: $cor-branca;
+}
+
+@media (max-width: 850px) {
+    .caracteristicas .grid {
+        flex-direction: column;
+    }
+}
+
+/*Newsletter*/
+
+.newslatter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 50px;
+}
+
+.newslatter h3 {
+    font-size: $tamanho-titles;
+    margin-bottom: 35px;
+    color: $cor-verde;
+    text-align: center;
+}
+
+.newslatter p {
+    max-width: 800px;
+    margin-bottom: 35px;
+    color: $cor-verde;
+    text-align: center;
+}
+
+.newslatter hr {
+    width: 200px;
+    height: 2px;
+    background-color: $cor-verde;
+    margin-bottom: 70px;
+    border: none;
+}
+
+.newslatter form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 800px;
+}
+
+.newslatter input {
+    padding: 15px;
+    border: 1px solid $cor-verde;
+    border-radius: 4px;
+    margin-right: 15px;
+    flex: 1;
+}
+
+.newslatter button {
+    padding: 15px;
+    color: $cor-branca;
+    background-color: $cor-escuro;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .newslatter input {
+        flex-basis: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+/*Footer*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $cor-escuro;
+    padding: 50px 0;
+    align-items: center;
+}
+
+footer ul {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+footer ul li {
+    margin-right: 10px;
+
+}
+
+footer ul li:last-child {
+    margin-right: 0;
+}
+
+footer ul li a {
+    color: $cor-verde;
+}
+
+footer p {
+    color: $cor-verde;
+    text-align: center;
+}
